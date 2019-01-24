@@ -148,6 +148,14 @@
 //!
 //! [read_int]: decode/fn.read_int.html
 
+#![cfg_attr(not(feature = "std"), no_std)]
+
+#[cfg(not(feature = "std"))]
+mod std {
+    pub use core::*;
+    pub use nostd::*;
+}
+
 pub mod decode;
 pub mod encode;
 mod marker;
