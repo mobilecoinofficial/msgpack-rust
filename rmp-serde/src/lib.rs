@@ -84,8 +84,7 @@ use std::mem;
 use std::str::{self, Utf8Error};
 
 use alloc::vec::Vec;
-use alloc::string::String;
-use alloc::prelude::ToString;
+use alloc::string::{String, ToString};
 
 use serde::{Deserialize, Serialize};
 use serde::de;
